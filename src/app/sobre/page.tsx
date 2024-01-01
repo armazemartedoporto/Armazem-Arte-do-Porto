@@ -37,7 +37,7 @@ export default function Sobre() {
       <DivConteudo>
         <>
           <Row>
-            <Images src='assets/imagem2.jpg' alt='Loja' />
+            <Images src='./assets/imagem2.jpg' alt='Loja' />
             <ContainerTexto>
               <>
                 <Titulo titulo='Objetivo' />
@@ -91,7 +91,7 @@ export default function Sobre() {
                 </Row>
               </>
             </ContainerTexto>
-            <Images src='assets/imagem12.jpg' alt='Loja' />
+            <Images src='./assets/imagem12.jpg' alt='Loja' />
 
           </Row>
 
