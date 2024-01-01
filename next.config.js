@@ -8,7 +8,7 @@ const nextConfig = {
     // Enables the styled-components SWC transform
     styledComponents: true,
   },
-  //assetPrefix: "/github-pages",
+  assetPrefix: "/Armazem-Arte-do-Porto",
   basePath: "/Armazem-Arte-do-Porto",
 };
 // eslint-disable-next-line no-undef
