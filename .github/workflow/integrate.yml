@@ -22,7 +22,7 @@ jobs:
       - name: Install and Build 🔧
         uses: actions/setup-node@v1
       - run: yarn install
-      - run: yarn next export
+      - run: yarn export
       - run: touch out/.nojekyll
         env:
             CI: true
