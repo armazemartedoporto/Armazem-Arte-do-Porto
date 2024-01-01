@@ -9,7 +9,7 @@ const nextConfig = {
     styledComponents: true,
   },
   //assetPrefix: "/github-pages",
-  asePath: "/github-pages",
+  //basePath: "/github-pages",
 };
 // eslint-disable-next-line no-undef
 module.exports = nextConfig;

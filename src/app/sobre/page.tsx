@@ -74,7 +74,7 @@ export default function Sobre() {
           <Row>
             <ContainerTexto>
               <>
-                <Titulo titulo='Mas vamos muito além... ' />
+                <Titulo titulo='Vamos muito além... ' />
                 <Row className='w-100 g-2'>
                   <div className='d-flex align-items-center'>
                     <VscDebugBreakpointLog size={30} style={{ margin: '0 10px 0 0' }} />
