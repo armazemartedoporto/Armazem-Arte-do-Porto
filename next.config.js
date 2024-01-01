@@ -8,7 +8,7 @@ const nextConfig = {
     // Enables the styled-components SWC transform
     styledComponents: true,
   },
-  assetPrefix: "/github-pages",
+  //assetPrefix: "/github-pages",
   basePath: "/github-pages",
 };
 // eslint-disable-next-line no-undef
