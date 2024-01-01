@@ -82,6 +82,8 @@ jobs:
         with:
           path: ./out
 
+      - run: touch out/.nojekyll
+
   # Deployment job
   deploy:
     environment:
