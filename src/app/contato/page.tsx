@@ -27,7 +27,7 @@ export default function Sobre() {
       <DivConteudo>
         <>
           <Row>
-            <Images src='/assets/Associação2.jpg' alt='Fachada da loja' />
+            <Images src='assets/Associação2.jpg' alt='Fachada da loja' />
             <ContainerTexto>
               <>
                 <Titulo titulo='Venha nos visitar' />

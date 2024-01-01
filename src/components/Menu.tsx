@@ -40,9 +40,9 @@ export default function Menu() {
 
       <Navbar collapseOnSelect expand="sm" className="" sticky="top">
         <Container className='justify-content-between'>
-          <NavbarBrandMod href="/home" >
+          <NavbarBrandMod href="/Armazem-Arte-do-Porto/home" >
             <IMG
-              src="/assets/Logo_3.png"
+              src="assets/Logo_3.png"
               className="d-inline-block align-top align-left"
               alt="Armazém Arte do Porto"
             />
@@ -50,9 +50,9 @@ export default function Menu() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <NavbarCollapse id="responsive-navbar-nav" className='justify-content-end' >
             <Nav className="" >
-              <Nav.Link href="/home" style={{ marginLeft: '10px' }}>Início</Nav.Link>
-              <Nav.Link href="/sobre" style={{ marginLeft: '10px' }}>Sobre</Nav.Link>
-              <Nav.Link href="/contato" style={{ marginLeft: '10px' }}>Contato</Nav.Link>
+              <Nav.Link href="/Armazem-Arte-do-Porto/home" style={{ marginLeft: '10px' }}>Início</Nav.Link>
+              <Nav.Link href="/Armazem-Arte-do-Porto/sobre" style={{ marginLeft: '10px' }}>Sobre</Nav.Link>
+              <Nav.Link href="/Armazem-Arte-do-Porto/contato" style={{ marginLeft: '10px' }}>Contato</Nav.Link>
               {/* <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
