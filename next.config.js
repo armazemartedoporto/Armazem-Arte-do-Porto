@@ -6,7 +6,6 @@ const BACKEND_URL = process.env.NODE_ENV === "production" ? "/next-gh-pages" : "
 
 const nextConfig = {
   output: "export",
-  reactStrictMode: true,
   compiler: {
     // Enables the styled-components SWC transform
     styledComponents: true,
