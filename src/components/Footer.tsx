@@ -53,7 +53,7 @@ export default function Footer() {
   return (
     <ContainerDiv fluid>
       <Col xs={4} md={2}>
-        <IMG src='/Logo 1.png'></IMG>
+        <IMG src='Logo 1.png'></IMG>
       </Col>
       <Col xs={8} md={6}>
         <Paragrafo>
