@@ -6,5 +6,6 @@ const nextConfig = {
     // Enables the styled-components SWC transform
     styledComponents: true,
   },
+  basePath: '/github-pages',
 };
 module.exports = nextConfig;
