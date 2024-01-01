@@ -21,14 +21,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Home() {
   const imagens = [
-    { id: 1, src: '/assets/Imagem3.jpg' },
-    { id: 2, src: '/assets/Imagem4.jpg' },
-    { id: 3, src: '/assets/Imagem5.jpg' },
-    { id: 4, src: '/assets/Imagem6.jpg' },
-    { id: 5, src: '/assets/Imagem7.jpg' },
-    { id: 6, src: '/assets/Imagem8.jpg' },
-    { id: 7, src: '/assets/Imagem9.jpg' },
-    { id: 8, src: '/assets/Imagem10.jpg' },
+    { id: 1, src: 'assets/Imagem3.jpg' },
+    { id: 2, src: 'assets/Imagem4.jpg' },
+    { id: 3, src: 'assets/Imagem5.jpg' },
+    { id: 4, src: 'assets/Imagem6.jpg' },
+    { id: 5, src: 'assets/Imagem7.jpg' },
+    { id: 6, src: 'assets/Imagem8.jpg' },
+    { id: 7, src: 'assets/Imagem9.jpg' },
+    { id: 8, src: 'assets/Imagem10.jpg' },
   ];
 
   return (
