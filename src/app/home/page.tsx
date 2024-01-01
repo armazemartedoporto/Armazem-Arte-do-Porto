@@ -94,7 +94,7 @@ export default function Home() {
               </>
             </ContainerTexto>
 
-            <Images src='./assets/Imagem1.jpg' alt='Loja' />
+            <Images src='assets/Imagem1.jpg' alt='Loja' />
           </Row>
         </>
       </DivConteudo>
