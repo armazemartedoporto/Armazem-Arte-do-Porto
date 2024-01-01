@@ -1,16 +1,14 @@
 /* eslint-disable quotes */
 /** @type {import('next').NextConfig} */
 
-// eslint-disable-next-line no-undef
-const BACKEND_URL = process.env.NODE_ENV === "production" ? "/next-gh-pages" : "";
-
 const nextConfig = {
   output: "export",
+  reactStrictMode: true,
   compiler: {
     // Enables the styled-components SWC transform
     styledComponents: true,
   },
-  basePath: BACKEND_URL,
+  basePath: "/Armazem-Arte-do-Porto",
 };
 // eslint-disable-next-line no-undef
 module.exports = nextConfig;
