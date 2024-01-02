@@ -21,6 +21,7 @@
 
 html,
 body {
+  font-family: 'Inter', 'Dancing Script', cursive, 'Anton', sans-serif;
   background: linear-gradient(180deg, #F4F0EE 0%, #F4F0EE 0%, #F4F0EE 0%);
 }
 

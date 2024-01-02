@@ -1,7 +1,7 @@
 
 //'use client';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Anton, Dancing_Script } from 'next/font/google';
 import './globals.css';
 import { ModaisProvider } from '@/context/ModaisContext';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -12,6 +12,9 @@ import 'swiper/css/pagination';
 
 
 const inter = Inter({ subsets: ['latin'] });
+const anton = Anton({ weight: ['400'], subsets: ['latin'] });
+const dancing = Dancing_Script({ subsets: ['latin'] });
+
 
 export const metadata: Metadata = {
   title: 'Armazém Arte do Porto',
