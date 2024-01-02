@@ -3,7 +3,7 @@
 
 const nextConfig = {
   output: "export",
-  reactStrictMode: true,
+  //reactStrictMode: true,
   compiler: {
     // Enables the styled-components SWC transform
     styledComponents: true,
