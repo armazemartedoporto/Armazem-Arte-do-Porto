@@ -65,9 +65,9 @@ export default function Footer() {
       <MenuFooter md={4}>
         <Navbar>
           <Nav className="" >
-            <Nav.Link href="/home" style={{ marginLeft: '10px' }}>Início</Nav.Link>
-            <Nav.Link href="/sobre" style={{ marginLeft: '10px' }}>Sobre</Nav.Link>
-            <Nav.Link href="/contato" style={{ marginLeft: '10px' }}>Contato</Nav.Link>
+            <Nav.Link href="/Armazem-Arte-do-Porto/home" style={{ marginLeft: '10px' }}>Início</Nav.Link>
+            <Nav.Link href="/Armazem-Arte-do-Porto/sobre" style={{ marginLeft: '10px' }}>Sobre</Nav.Link>
+            <Nav.Link href="/Armazem-Arte-do-Porto/contato" style={{ marginLeft: '10px' }}>Contato</Nav.Link>
           </Nav>
         </Navbar>
       </MenuFooter>
