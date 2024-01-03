@@ -22,28 +22,6 @@
 html,
 body {
   font-family: 'Inter', 'Dancing Script', cursive, 'Anton', sans-serif;
-  background: linear-gradient(180deg, #F4F0EE 0%, #F4F0EE 0%, #F4F0EE 0%);
+  background: linear-gradient(180deg, #ce8967 0%, #F4F0EE 0%, #F4F0EE 0%);
 }
 
-.rec-carousel-wrapper{
-  @media (max-width: 350px) {
-      padding: 0 !important;
-    }
-}
-
-.rec-arrow-right{
-  height: 25px !important;
-  width: 25px !important;
-  min-width: 25px !important;
-  font-size: 1rem !important;
-  line-height: 0 !important;
-
-}
-.rec-arrow-left {
-  height: 25px !important;
-  width: 25px !important;
-  min-width: 25px !important;
-  font-size: 1rem !important;
-  line-height: 0 !important;
-
-}
