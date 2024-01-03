@@ -2,7 +2,7 @@
 //'use client';
 import type { Metadata } from 'next';
 import { Inter, Anton, Dancing_Script } from 'next/font/google';
-import 'globals.css';
+import './globals.css';
 import { ModaisProvider } from '@/context/ModaisContext';
 import 'bootstrap/dist/css/bootstrap.css';
 // Import Swiper styles

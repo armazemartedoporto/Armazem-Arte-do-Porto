@@ -9,7 +9,7 @@ const nextConfig = {
     styledComponents: true,
   },
   assetPrefix: "/Armazem-Arte-do-Porto",
-  basePath: "/github-pages",
+  basePath: "/Armazem-Arte-do-Porto",
 };
 // eslint-disable-next-line no-undef
 module.exports = nextConfig;
