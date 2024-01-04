@@ -60,6 +60,7 @@ export default function Footer() {
           Praça Hercílio Luz, s/n <br />
           Espaço Estação União, Armazém I <br />
           Centro – Porto União – Santa Catarina <br/>
+          Tel: (42) 99954-4705
         </Paragrafo>
       </Col>
       <MenuFooter md={4}>
