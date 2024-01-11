@@ -31,7 +31,6 @@ export default function Home() {
     { id: 8, src: 'assets/Imagem10.jpg' },
     { id: 9, src: 'assets/Imagem14.jpg' },
     { id: 10, src: 'assets/Imagem15.jpg' },
-    { id: 11, src: 'assets/Imagem16.jpg' },
     { id: 12, src: 'assets/Imagem17.jpg' },
     { id: 13, src: 'assets/Imagem18.jpg' },
     { id: 14, src: 'assets/Imagem19.jpg' },
