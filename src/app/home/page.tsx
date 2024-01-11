@@ -23,12 +23,18 @@ export default function Home() {
   const imagens = [
     { id: 1, src: 'assets/Imagem3.jpg' },
     { id: 2, src: 'assets/Imagem4.jpg' },
-    { id: 3, src: 'assets/Imagem5.jpg' },
+    //{ id: 3, src: '/assets/Imagem5.jpg' },
     { id: 4, src: 'assets/Imagem6.jpg' },
     { id: 5, src: 'assets/Imagem7.jpg' },
     { id: 6, src: 'assets/Imagem8.jpg' },
     { id: 7, src: 'assets/Imagem9.jpg' },
     { id: 8, src: 'assets/Imagem10.jpg' },
+    { id: 9, src: 'assets/Imagem14.jpg' },
+    { id: 10, src: 'assets/Imagem15.jpg' },
+    { id: 11, src: 'assets/Imagem16.jpg' },
+    { id: 12, src: 'assets/Imagem17.jpg' },
+    { id: 13, src: 'assets/Imagem18.jpg' },
+    { id: 14, src: 'assets/Imagem19.jpg' },
   ];
 
   return (
@@ -90,7 +96,7 @@ export default function Home() {
             <ContainerTexto>
               <>
                 <Titulo titulo='Peças feitas a mãos com qualidade e exclusividade' />
-                <Texto texto='Bordados variados, crochê, tricô, madeira de demolição, lembranças da cidade e produtos de cunho étnicos como pintura em madeira, frivoleté, hardanger, vagonite, tear, macramé, biscuit aplicado, dentre outros. ' />
+                <Texto texto='Trabalhos manuais feitos com linhas, agulhas, madeiras, pincéis nas mais variadas técnicas. ' />
               </>
             </ContainerTexto>
 

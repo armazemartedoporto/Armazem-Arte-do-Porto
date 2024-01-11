@@ -86,7 +86,7 @@ export default function Sobre() {
                   </div>
                   <div className='d-flex align-items-center'>
                     <VscDebugBreakpointLog size={30} style={{ margin: '0 10px 0 0' }} />
-                    <Texto texto={'Oferecemos um espaço aberto a comunidade artística ou expositores que precisem de um espaço físico para eventos.'} />
+                    <Texto texto={'A Associação gerencia espaço aberto a comunidade para exposições culturais ligadas a arte e cultura artesanal.'} />
                   </div>
                 </Row>
               </>

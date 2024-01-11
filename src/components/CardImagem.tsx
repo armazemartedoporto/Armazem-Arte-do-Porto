@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { PropsWithChildren } from 'react';
 import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -25,7 +26,7 @@ border: none;
   }
 `;
 
-const Imagem = styled.img`
+const Imagem = styled(Image)`
 height: 250px;
 width: fit-content;
 position: absolute;
@@ -37,7 +38,7 @@ position: absolute;
 export default function CardImagem({ src }: Props) {
   return (
     <DivCard >
-      <Imagem src={src}></Imagem>
+      <Imagem src={src} alt='imagem' width={200} height={200}></Imagem>
     </DivCard>
 
   );

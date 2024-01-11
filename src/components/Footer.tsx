@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
@@ -18,7 +19,7 @@ const ContainerDiv = styled(Container)`
    }
 `;
 
-const IMG = styled.img`
+const IMG = styled(Image)`
   width: 80px;
   @media (max-width: 368px) {
     width: 60px;
@@ -53,13 +54,18 @@ export default function Footer() {
   return (
     <ContainerDiv fluid>
       <Col xs={4} md={2}>
-        <IMG src='Logo 1.png'></IMG>
+        <IMG
+          src='Logo 1.png'
+          width={100}
+          height={80}
+          alt='Logo'
+        />
       </Col>
       <Col xs={8} md={6}>
         <Paragrafo>
           Praça Hercílio Luz, s/n <br />
           Espaço Estação União, Armazém I <br />
-          Centro – Porto União – Santa Catarina <br/>
+          Centro – Porto União – Santa Catarina <br />
           Tel: (42) 99954-4705
         </Paragrafo>
       </Col>
