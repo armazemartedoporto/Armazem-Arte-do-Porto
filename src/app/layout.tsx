@@ -5,6 +5,7 @@ import { Inter, Anton, Dancing_Script } from 'next/font/google';
 import './globals.css';
 import { ModaisProvider } from '@/context/ModaisContext';
 import 'bootstrap/dist/css/bootstrap.css';
+import StyledComponentsRegistry from '@/app/registry';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -35,9 +36,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
       </head>
       <body className={inter.className}>
-        <ModaisProvider>
-          {children}
-        </ModaisProvider>
+        <StyledComponentsRegistry>
+          <ModaisProvider>
+            {children}
+          </ModaisProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
