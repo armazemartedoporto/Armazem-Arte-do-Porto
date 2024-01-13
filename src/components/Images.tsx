@@ -24,7 +24,7 @@ const ResponsiveImage = styled(Image)`
 
 const ResponsiveContainer = styled.div`
   width: 100%;
-  max-width: 300px; /* Defina um valor máximo para evitar que a imagem fique muito grande */
+  max-width: 250px; /* Defina um valor máximo para evitar que a imagem fique muito grande */
   margin: 0 auto; /* Centralize o contêiner */
 `;
 
@@ -42,9 +42,9 @@ export default function Images({ src, alt }: Props) {
         <ResponsiveImage
           src={src}
           alt={alt}
-          width={20}
-          height={40}
-          layout="responsive"
+          width={300}
+          height={300}
+          //layout="responsive"
         />
       </ResponsiveContainer>
     </Col>

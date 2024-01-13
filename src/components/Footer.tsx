@@ -20,9 +20,10 @@ const ContainerDiv = styled(Container)`
 `;
 
 const IMG = styled(Image)`
-  width: 80px;
+  width: auto;
   @media (max-width: 368px) {
-    width: 60px;
+    width: 80%;
+    height: 80%;
    }
 
 `;
