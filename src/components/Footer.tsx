@@ -57,7 +57,7 @@ export default function Footer() {
         <IMG
           src='Logo 1.png'
           width={100}
-          height={80}
+          height={100}
           alt='Logo'
         />
       </Col>
