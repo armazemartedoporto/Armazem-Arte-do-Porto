@@ -43,7 +43,7 @@ export default function Home() {
       <DivMarrom>
         <>
           <Row className='w-100 '>
-            <TituloColorido titulo='Fazendo Arte com Amor há 17 anos' />
+            <TituloColorido titulo='Fazendo Arte com Amor há 18 anos' />
           </Row>
           <Row className='w-100 pe-2'>
             <Swiper
