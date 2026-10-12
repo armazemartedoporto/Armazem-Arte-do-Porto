@@ -1,4 +1,10 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { caminho } from '@/utils/caminho';
+import { logoRodape } from '@/data/imagens';
+import { paginas } from '@/data/links';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
@@ -56,10 +62,10 @@ export default function Footer() {
     <ContainerDiv fluid>
       <Col xs={4} md={2}>
         <IMG
-          src='Logo 1.png'
+          src={caminho(logoRodape.src)}
           width={100}
           height={100}
-          alt='Logo'
+          alt={logoRodape.alt}
         />
       </Col>
       <Col xs={8} md={6}>
@@ -73,9 +79,9 @@ export default function Footer() {
       <MenuFooter md={4}>
         <Navbar>
           <Nav className="" >
-            <Nav.Link href="/Armazem-Arte-do-Porto/home" style={{ marginLeft: '10px' }}>Início</Nav.Link>
-            <Nav.Link href="/Armazem-Arte-do-Porto/sobre" style={{ marginLeft: '10px' }}>Sobre</Nav.Link>
-            <Nav.Link href="/Armazem-Arte-do-Porto/contato" style={{ marginLeft: '10px' }}>Contato</Nav.Link>
+            {paginas.map((pagina) => (
+              <Nav.Link key={pagina.href} as={Link} href={pagina.href} style={{ marginLeft: '10px' }}>{pagina.nome}</Nav.Link>
+            ))}
           </Nav>
         </Navbar>
       </MenuFooter>

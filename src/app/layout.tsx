@@ -1,5 +1,3 @@
-
-//'use client';
 import type { Metadata } from 'next';
 import { Inter, Anton, Dancing_Script } from 'next/font/google';
 import './globals.css';
@@ -12,18 +10,32 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import Script from 'next/script';
-const GTM_ID = 'G-7212BLMX3V';
+const GA_ID = 'G-7212BLMX3V';
 
+// Usadas via variável CSS nos styled-components (Titulo e TituloColorido)
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const anton = Anton({ weight: ['400'], subsets: ['latin'], variable: '--font-anton' });
+const dancing = Dancing_Script({ weight: ['700'], subsets: ['latin'], variable: '--font-dancing' });
 
-
-const inter = Inter({ subsets: ['latin'] });
-const anton = Anton({ weight: ['400'], subsets: ['latin'] });
-const dancing = Dancing_Script({ subsets: ['latin'] });
-
+const SITE_URL = 'https://armazemartedoporto.github.io/Armazem-Arte-do-Porto';
+const DESCRICAO = 'Associação de Artesãos de Porto União - SC. Peças feitas à mão com qualidade e exclusividade: linhas, agulhas, madeiras, pincéis e muito mais.';
 
 export const metadata: Metadata = {
-  title: 'Armazém Arte do Porto',
-  description: 'Artesanato de Porto União - SC',
+  metadataBase: new URL(`${SITE_URL}/`),
+  title: {
+    default: 'Armazém Arte do Porto | Artesanato de Porto União - SC',
+    template: '%s | Armazém Arte do Porto',
+  },
+  description: DESCRICAO,
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    siteName: 'Armazém Arte do Porto',
+    title: 'Armazém Arte do Porto',
+    description: DESCRICAO,
+    url: `${SITE_URL}/`,
+    images: [{ url: `${SITE_URL}/assets/Imagem3.jpg`, alt: 'Artesanato do Armazém Arte do Porto' }],
+  },
 };
 
 export default function RootLayout({
@@ -34,31 +46,21 @@ export default function RootLayout({
   return (
 
     <html lang="pt-br">
-      <Script id="google-tag-manager" strategy="afterInteractive">
-        {`
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','${GTM_ID}');
-        `}
-      </Script>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
-      </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${anton.variable} ${dancing.variable}`}>
         <StyledComponentsRegistry>
           <ModaisProvider>
             {children}
           </ModaisProvider>
         </StyledComponentsRegistry>
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
-          }}
-        />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );

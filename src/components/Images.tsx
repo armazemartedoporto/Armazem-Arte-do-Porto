@@ -1,10 +1,13 @@
+'use client';
+
 import styled from 'styled-components';
 import Image from 'next/image';
 import { Col } from 'react-bootstrap';
+import { caminho } from '@/utils/caminho';
+import { ImagemDados } from '@/data/imagens';
 
 interface Props {
-  src: string;
-  alt: string;
+  imagem: ImagemDados;
 }
 
 // Crie um componente estilizado para a imagem responsiva
@@ -28,7 +31,7 @@ const ResponsiveContainer = styled.div`
   margin: 0 auto; /* Centralize o contêiner */
 `;
 
-export default function Images({ src, alt }: Props) {
+export default function Images({ imagem }: Props) {
   return (
     //   <Col xs={6} md={12}>
     //     <Div>
@@ -40,8 +43,8 @@ export default function Images({ src, alt }: Props) {
     <Col md={4} xs={12}>
       <ResponsiveContainer>
         <ResponsiveImage
-          src={src}
-          alt={alt}
+          src={caminho(imagem.src)}
+          alt={imagem.alt}
           width={300}
           height={300}
           //layout="responsive"

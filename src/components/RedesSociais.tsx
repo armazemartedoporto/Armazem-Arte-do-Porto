@@ -1,6 +1,8 @@
-import { useRouter } from 'next/navigation';
+'use client';
+
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import styled from 'styled-components';
+import { redesSociais } from '@/data/links';
 
 const DIV = styled.div`
   margin: 0;
@@ -19,16 +21,26 @@ const DIV = styled.div`
    }
 `;
 
-export default function RedesSociais() {
-  const router = useRouter();
+const Link = styled.a`
+  color: inherit;
+  line-height: 0;
+`;
 
+const redes = [
+  { nome: 'Facebook', href: redesSociais.facebook, Icone: FaFacebook },
+  { nome: 'Instagram', href: redesSociais.instagram, Icone: FaInstagram },
+  { nome: 'YouTube', href: redesSociais.youtube, Icone: FaYoutube },
+  { nome: 'WhatsApp', href: redesSociais.whatsapp, Icone: FaWhatsapp },
+];
+
+export default function RedesSociais() {
   return (
     <DIV className='d-flex justify-content-around'>
-      <FaFacebook size={30} style={{cursor: 'pointer'}} onClick={() => router.push('https://www.facebook.com/profile.php?id=61553462159195&mibextid=ZbWKwL')}/>
-      <FaInstagram size={30} style={{ cursor: 'pointer' }}  onClick={() => router.push('https://www.instagram.com/armazem_arte_do_porto/')} />
-      <FaYoutube size={30} style={{ cursor: 'pointer' }}  onClick={() => router.push('https://www.youtube.com/@ArmazemArtedoPorto')} />
-      <FaWhatsapp size={30} style={{ cursor: 'pointer' }} onClick={() => router.push('https://wa.me/5542999544705')} />
+      {redes.map(({ nome, href, Icone }) => (
+        <Link key={nome} href={href} target='_blank' rel='noopener noreferrer' aria-label={nome}>
+          <Icone size={30} />
+        </Link>
+      ))}
     </DIV>
-
   );
 }

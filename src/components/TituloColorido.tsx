@@ -1,11 +1,13 @@
+'use client';
+
 import styled from 'styled-components';
 
 interface Props {
-  titulo: string;
+  titulo: React.ReactNode;
 }
 
 const H1 = styled.h1 `
-font-family: 'Anton', sans-serif;
+font-family: var(--font-anton), sans-serif;
 color: #96776a;
   width: 100%;
   margin: 20px 0 20px 0;

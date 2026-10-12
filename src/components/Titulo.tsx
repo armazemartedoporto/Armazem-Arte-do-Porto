@@ -1,3 +1,5 @@
+'use client';
+
 import styled from 'styled-components';
 
 interface Props {
@@ -5,7 +7,7 @@ interface Props {
 }
 
 const H1 = styled.h1 `
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-dancing), cursive;
   margin: 20px 0;
   @media (max-width: 768px) {
     font-size: 2.2rem;

@@ -1,10 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import { PropsWithChildren } from 'react';
 import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
+import { caminho } from '@/utils/caminho';
+import { ImagemDados } from '@/data/imagens';
 
 interface Props extends PropsWithChildren {
-  src: string;
+  imagem: ImagemDados;
 }
 
 const DivCard = styled(Card)`
@@ -35,10 +39,10 @@ position: absolute;
 
 `;
 
-export default function CardImagem({ src }: Props) {
+export default function CardImagem({ imagem }: Props) {
   return (
     <DivCard >
-      <Imagem src={src} alt='imagem' width={200} height={200}></Imagem>
+      <Imagem src={caminho(imagem.src)} alt={imagem.alt} width={200} height={200}></Imagem>
     </DivCard>
 
   );

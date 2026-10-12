@@ -1,5 +1,11 @@
+'use client';
+
 import styled from 'styled-components';
 import * as React from 'react';
+import Link from 'next/link';
+import { caminho } from '@/utils/caminho';
+import { logo } from '@/data/imagens';
+import { paginas } from '@/data/links';
 import { Container, Nav, NavDropdown, Navbar, NavbarBrand, NavbarCollapse } from 'react-bootstrap';
 
 const IMG = styled.img`
@@ -40,19 +46,19 @@ export default function Menu() {
 
       <Navbar collapseOnSelect expand="sm" className="" sticky="top">
         <Container className='justify-content-between'>
-          <NavbarBrandMod href="/Armazem-Arte-do-Porto/home" >
+          <NavbarBrandMod as={Link} href="/" >
             <IMG
-              src="assets/Logo_3.png"
+              src={caminho(logo.src)}
               className="d-inline-block align-top align-left"
-              alt="Armazém Arte do Porto"
+              alt={logo.alt}
             />
           </NavbarBrandMod>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <NavbarCollapse id="responsive-navbar-nav" className='justify-content-end' >
             <Nav className="" >
-              <Nav.Link href="/Armazem-Arte-do-Porto/home" style={{ marginLeft: '10px' }}>Início</Nav.Link>
-              <Nav.Link href="/Armazem-Arte-do-Porto/sobre" style={{ marginLeft: '10px' }}>Sobre</Nav.Link>
-              <Nav.Link href="/Armazem-Arte-do-Porto/contato" style={{ marginLeft: '10px' }}>Contato</Nav.Link>
+              {paginas.map((pagina) => (
+                <Nav.Link key={pagina.href} as={Link} href={pagina.href} style={{ marginLeft: '10px' }}>{pagina.nome}</Nav.Link>
+              ))}
               {/* <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

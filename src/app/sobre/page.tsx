@@ -1,5 +1,4 @@
-'use client';
-
+import type { Metadata } from 'next';
 import ContainerTexto from '@/components/ContainerTexto';
 import DivConteudo from '@/components/DivConteudo';
 import DivMarrom from '@/components/DivMarrom';
@@ -11,9 +10,15 @@ import Texto from '@/components/Texto';
 import TextoDivMarrom from '@/components/TextoDivMarrom';
 import Titulo from '@/components/Titulo';
 import TituloColorido from '@/components/TituloColorido';
-import { Container, Row } from 'react-bootstrap';
-import { VscDebugBreakpointLog } from 'react-icons/vsc';
+import { Container, Row } from '@/components/Bootstrap';
+import Marcador from '@/components/Marcador';
+import { imagemObjetivo, imagemSobreFinal } from '@/data/imagens';
 
+
+export const metadata: Metadata = {
+  title: 'Sobre',
+  description: 'Missão, visão e valores da Associação de Artesãos de Porto União - SC, e nossa trajetória em defesa do artesanato local.',
+};
 
 export default function Sobre() {
 
@@ -37,7 +42,7 @@ export default function Sobre() {
       <DivConteudo>
         <>
           <Row>
-            <Images src='assets/Imagem2.jpg' alt='Loja' />
+            <Images imagem={imagemObjetivo} />
             <ContainerTexto>
               <>
                 <Titulo titulo='Objetivo' />
@@ -77,21 +82,21 @@ export default function Sobre() {
                 <Titulo titulo='Vamos muito além... ' />
                 <Row className='w-100 g-2'>
                   <div className='d-flex align-items-center'>
-                    <VscDebugBreakpointLog size={30} style={{ margin: '0 10px 0 0' }} />
+                    <Marcador size={30} />
                     <Texto texto={'Atendemos artesãos sociais (não associados) de mais idade que produzem trabalho de interesse cultural para a associação.'} />
                   </div>
                   <div className='d-flex align-items-center'>
-                    <VscDebugBreakpointLog size={25} style={{ margin: '0 10px 0 0' }} />
+                    <Marcador size={25} />
                     <Texto texto={'Premiamos artesãos não-associados ou In Memoriam com o troféu Valor Cultural desde 2013. '} />
                   </div>
                   <div className='d-flex align-items-center'>
-                    <VscDebugBreakpointLog size={30} style={{ margin: '0 10px 0 0' }} />
+                    <Marcador size={30} />
                     <Texto texto={'A Associação gerencia espaço aberto a comunidade para exposições culturais ligadas a arte e cultura artesanal.'} />
                   </div>
                 </Row>
               </>
             </ContainerTexto>
-            <Images src='assets/Imagem12.jpg' alt='Loja' />
+            <Images imagem={imagemSobreFinal} />
 
           </Row>
 
@@ -101,7 +106,7 @@ export default function Sobre() {
       <DivMarrom>
         <Container fluid>
           <Row>
-            <TituloColorido titulo='Siga-nos nas redes'></TituloColorido>
+            <TituloColorido titulo='Siga-nos nas redes' />
           </Row>
           <Row className='d-flex justify-content-center'>
             <RedesSociais />

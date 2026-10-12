@@ -1,5 +1,4 @@
-'use client';
-
+import type { Metadata } from 'next';
 import ContainerTexto from '@/components/ContainerTexto';
 import DivConteudo from '@/components/DivConteudo';
 import DivMarrom from '@/components/DivMarrom';
@@ -9,15 +8,14 @@ import RedesSociais from '@/components/RedesSociais';
 import Texto from '@/components/Texto';
 import Titulo from '@/components/Titulo';
 import TituloColorido from '@/components/TituloColorido';
-import { Row } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Row } from '@/components/Bootstrap';
+import TextoDiv from '@/components/TextoDiv';
+import { imagemContato } from '@/data/imagens';
 
-const TextoDiv = styled.div`
-@media (max-width: 450px) {
-    font-size: 0.9rem;
-   }
-
-`;
+export const metadata: Metadata = {
+  title: 'Contato',
+  description: 'Venha nos visitar: Praça Hercílio Luz, Espaço Estação União, Armazém I, Centro - Porto União - SC. Tel: (42) 99954-4705.',
+};
 
 export default function Sobre() {
 
@@ -27,7 +25,7 @@ export default function Sobre() {
       <DivConteudo>
         <>
           <Row>
-            <Images src='assets/Associação2.jpg' alt='Fachada da loja' />
+            <Images imagem={imagemContato} />
             <ContainerTexto>
               <>
                 <Titulo titulo='Venha nos visitar' />
@@ -50,7 +48,7 @@ export default function Sobre() {
               <TituloColorido titulo='Entre em contato conosco' />
               <TextoDiv className='d-flex justify-content-center flex-column mb-3'>
 
-                <div className='d-flex justify-content-center  flex-wrap'>Telefone:<br/> <a href='tel:+5542999544705'> (42) 99954-4705</a></div>
+                <div className='d-flex justify-content-center flex-wrap'>Telefone: <br/> <a href='tel:+5542999544705'> (42) 99954-4705</a></div>
                 <div className='d-flex justify-content-center flex-wrap'>Email: <a href='mailto:armazemartedoporto@gmail.com'> armazemartedoporto@gmail.com</a></div>
 
               </TextoDiv>
