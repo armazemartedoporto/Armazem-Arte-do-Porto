@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: 'Armazém Arte do Porto',
     description: DESCRICAO,
     url: `${SITE_URL}/`,
-    images: [{ url: `${SITE_URL}/assets/Imagem3.jpg`, alt: 'Artesanato do Armazém Arte do Porto' }],
+    images: [{ url: `${SITE_URL}/assets/Imagem3-v2.jpg`, alt: 'Artesanato do Armazém Arte do Porto' }],
   },
 };
 
