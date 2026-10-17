@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { caminho } from '@/utils/caminho';
 import { logoRodape } from '@/data/imagens';
+import { todosTelefones } from '@/data/contatos';
 import { paginas } from '@/data/links';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -73,7 +74,7 @@ export default function Footer() {
           Praça Hercílio Luz, s/n <br />
           Espaço Estação União, Armazém I <br />
           Centro – Porto União – Santa Catarina <br />
-          Tel: (42) 99954-4705
+          Tel: {todosTelefones}
         </Paragrafo>
       </Col>
       <MenuFooter md={4}>

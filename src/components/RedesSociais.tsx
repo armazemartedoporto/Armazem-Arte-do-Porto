@@ -1,19 +1,19 @@
 'use client';
 
-import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import styled from 'styled-components';
 import { redesSociais } from '@/data/links';
 
 const DIV = styled.div`
   margin: 0;
-  width: 25%;
+  width: 30%;
 
 @media (max-width: 850px) {
-    width: 40%;
+    width: 50%;
    }
 
   @media (max-width: 550px) {
-    width: 50%;
+    width: 60%;
    }
 
   @media (max-width: 360px) {
@@ -31,6 +31,7 @@ const redes = [
   { nome: 'Instagram', href: redesSociais.instagram, Icone: FaInstagram },
   { nome: 'YouTube', href: redesSociais.youtube, Icone: FaYoutube },
   { nome: 'WhatsApp', href: redesSociais.whatsapp, Icone: FaWhatsapp },
+  { nome: 'Email', href: redesSociais.email, Icone: FaEnvelope },
 ];
 
 export default function RedesSociais() {
